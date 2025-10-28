@@ -1,0 +1,96 @@
+@rootURL = http://localhost:5286
+
+//HTTP para la clase Usuario
+
+
+GET {{rootURL}}/api/Usuario
+Accept: application/json
+
+###
+GET {{rootURL}}/api/Usuario/4
+Accept: application/json
+
+###
+POST {{rootURL}}/api/Usuario
+Content-Type: application/json
+{
+    "Nombre" : "Angela Patricia",
+    "Correo" : "Angela@Buelvas",
+    "Contraseña": "123456789"
+}
+###
+PUT {{rootURL}}/api/Usuario/4
+Content-Type: application/json
+{
+    "ID_Usuario" : 4,
+    "Nombre" : "Angela Patricia",
+    "Correo" : "Angela@Buelvas",
+    "Contraseña": "987654321"
+}
+
+###
+DELETE {{rootURL}}/api/Usuario/4
+###
+
+//HTTP para la clase Alarma
+
+GET {{rootURL}}/api/Alarma
+Accept: application/json
+
+###
+GET {{rootURL}}/api/Alarma/3
+Accept: application/json
+
+###
+POST {{rootURL}}/api/Alarma
+Content-Type: application/json
+{
+    "Nombre" : "Opening Dragon Ball",
+    "Ruta" : "xxxx/DB.mp3"
+}
+###
+PUT {{rootURL}}/api/Alarma/5
+Content-Type: application/json
+{
+    "ID_Alarma" : 5,
+    "Nombre" : "Opening Dragon Ball Z",
+    "Ruta" : "xxxx/DB.mp3"
+}
+
+###
+DELETE {{rootURL}}/api/Alarma/5
+
+###
+//HTTP para la clase Tarea
+
+
+GET {{rootURL}}/api/Tarea
+Accept: application/json
+
+###
+GET {{rootURL}}/api/Tarea/4
+Accept: application/json
+
+###
+POST {{rootURL}}/api/Tarea
+Content-Type: application/json
+{
+    "Titulo" : "Hora de dormir",
+    "Descripcion" : "Tengo que irme a descansar a esta hora",  
+    "Fecha_Limite" : "2025-10-15",
+    "Hora" : "09:00:00",
+    "ID_Usuario" : 1,
+    "ID_Alarma" : 3
+}
+###
+PUT {{rootURL}}/api/Tarea/4
+Content-Type: application/json
+{
+    "ID_Tarea" : 4,
+    "Titulo" : "Hora de dormir",
+    "Descripcion" : "Tengo que irme a descansar a esta hora",  
+    "Fecha_Limite" : "2025-10-15",
+    "Hora" : "08:30:00",
+    "ID_Usuario" : 1,
+    "ID_Alarma" : 3
+}
